@@ -1,0 +1,38 @@
+* {
+  font-family: "Inconsolata", serif;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f57463;
+  --textLight: #fff;
+  --textGray: #c5c1d9;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textLight);
+  font-size: 1.6rem;
+  background: url("../assets/background.png") no-repeat center bottom;
+}
+
+#root {
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+}
+
+.activeStyle {
+  color: var(--primary);
+  transition: "all .4s ease-in-out";
+}

@@ -7,7 +7,7 @@ function Header() {
   return (
     <HeaderWrapper>
       <Link to="/" className="logo">
-        <img src={logo} alt="in to Home Page" />
+        <img src={logo} aria-label="Link to Home Page" alt="Coding Conf Logo" />
         <span>Coding Conf Event</span>
       </Link>
 

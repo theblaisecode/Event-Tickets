@@ -7,14 +7,14 @@ function Nav() {
       <NavLink
         to="/"
         aria-label="Link to Home page"
-        className={({ isActive }) => (isActive ? "activeStyle" : null)}>
+        className={({ isActive }) => (isActive ? "activeStyle" : "")}>
         Home
       </NavLink>
 
       <NavLink
         to="/about"
         aria-label="Link to About page"
-        className={({ isActive }) => (isActive ? "activeStyle" : null)}>
+        className={({ isActive }) => (isActive ? "activeStyle" : "")}>
         About
       </NavLink>
     </NavWrapper>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PopUpWrapper from "../styles/PopUpWrapper";
 import Heading from "./Heading";
-import logo from "../assets/logo.png";
 import fulllogo from "../assets/fullLogo.png";
 import ticketImg from "../assets/ticket.png";
 import { HiXMark } from "react-icons/hi2";
@@ -19,6 +18,7 @@ function PopUp(props: PopupProp) {
       is ready.
     </>
   );
+
   const subtitle = (
     <>
       We've emailed your ticket to <span>theblaisecode@gmail.com</span> and will
@@ -29,6 +29,8 @@ function PopUp(props: PopupProp) {
   const currentDate = new Date();
   const eventDate = new Date();
   eventDate.setDate(currentDate.getDate() + 14);
+
+  const ticketNumber = Math.floor(Math.random() * 90000) + 10000;
 
   // const text = (
   //   <>
@@ -85,12 +87,12 @@ function PopUp(props: PopupProp) {
                 </div>
               </div>
 
-              <div className="attendee">
-                
-              </div>
+              <div className="attendee"></div>
             </div>
+          </div>
 
-            <div className="rightContent"></div>
+          <div className="rightContent">
+            <p>#{ticketNumber}</p>
           </div>
         </div>
       </div>

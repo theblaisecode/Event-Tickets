@@ -10,7 +10,7 @@
 :root {
   --primary: #f57463;
   --textLight: #fff;
-  --textGray: #c5c1d9;
+  --textGray: #c5c1d9a1;
   --formBg: #c5c1d92a;
   --error: #cf1f1ffd;
 }

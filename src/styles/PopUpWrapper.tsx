@@ -110,6 +110,15 @@ const PopUpWrapper = styled.div`
     margin-left: 6rem;
     margin-top: 0.3rem;
   }
+
+  .rightContent {
+    position: absolute;
+    transform: rotate(90deg);
+    font-size: 2.2rem;
+    top: 43%;
+    right:2%;
+    color: var(--textGray)
+  }
 `;
 
 export default PopUpWrapper;

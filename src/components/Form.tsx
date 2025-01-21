@@ -31,20 +31,14 @@ function Form() {
   );
 }
 
-type FormData = {
-  name: string;
-  email: string;
-  username: string;
-};
-
 export const ticketFormAction: ActionFunction = async ({ request }) => {
   console.log(request);
 
   const data = await request.formData();
-  const generate: FormData = {
-    name: data.get("name") as string,
-    email: data.get("email") as string,
-    username: data.get("username") as string,
+  const generate = {
+    name: data.get("name"),
+    email: data.get("email"),
+    username: data.get("username"),
   };
 
   console.log(generate);

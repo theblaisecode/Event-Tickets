@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import PopUpWrapper from "../styles/PopUpWrapper";
 import Heading from "./Heading";
 import logo from "../assets/logo.png";
+import fulllogo from "../assets/fullLogo.png";
+import ticketImg from "../assets/ticket.png";
 import { HiXMark } from "react-icons/hi2";
 
 type PopupProp = {
@@ -23,6 +25,11 @@ function PopUp(props: PopupProp) {
       send updates in the run up to the event.
     </>
   );
+
+  const currentDate = new Date();
+  const eventDate = new Date();
+  eventDate.setDate(currentDate.getDate() + 14);
+
   // const text = (
   //   <>
   //     Congrats,
@@ -43,11 +50,10 @@ function PopUp(props: PopupProp) {
         <div className="head">
           <Link to="/" className="logo">
             <img
-              src={logo}
+              src={fulllogo}
               aria-label="Link to Home Page"
               alt="Coding Conf Logo"
             />
-            <span>Coding Conf Event</span>
           </Link>
 
           <button className="closebutton" onClick={props.closePopup}>
@@ -60,17 +66,31 @@ function PopUp(props: PopupProp) {
         </div>
 
         <div className="contentBottom">
-          <div className="leftContent">
-            <div className="logo">
-              <img src={logo} alt="Coding Conf Logo" />
-              <span>Coding Conf</span>
+          <img src={ticketImg} alt="" className="ticket" />
+
+          <div className="ticketContent">
+            <div className="leftContent">
+              <div className="eventDetails">
+                <div className="logo">
+                  <img src={fulllogo} alt="Coding Conf Logo" />
+                </div>
+
+                <div className="date">
+                  {eventDate.toLocaleDateString("en-US", {
+                    month: "short", // Abbreviated month (e.g., "Feb")
+                    day: "2-digit", // Day as two digits (e.g., "04")
+                    year: "numeric", // Full year (e.g., "2025")
+                  })}{" "}
+                  / Lagos, NG
+                </div>
+              </div>
+
+              <div className="attendee">
+                
+              </div>
             </div>
 
-            <div className="date">{} / Lagos, NG</div>
-          </div>
-
-          <div className="rightContent">
-    
+            <div className="rightContent"></div>
           </div>
         </div>
       </div>

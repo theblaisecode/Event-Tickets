@@ -16,6 +16,10 @@ const PopUpWrapper = styled.div`
   z-index: 1;
 
   .popUpContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -30,10 +34,11 @@ const PopUpWrapper = styled.div`
   }
 
   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    width: 70%;
+  }
+
+  .logo img {
+    width: 100%;
   }
 
   .contentTop {
@@ -50,11 +55,11 @@ const PopUpWrapper = styled.div`
   }
 
   .title span {
-    font-weight:700;
+    font-weight: 700;
     background: linear-gradient(to right, #f57463, #fff);
-    -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
-    background-clip: text; /* For other browsers that support it */
-    color: transparent; /* Make the text color transparent to show the gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .contentTop .subTitle {
@@ -63,6 +68,47 @@ const PopUpWrapper = styled.div`
 
   .subTitle span {
     color: var(--primary);
+  }
+
+  .contentBottom {
+    margin-top: 10rem;
+    width: 45%;
+    position: relative;
+  }
+
+  .contentBottom .ticket {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ticketContent {
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: var(--textGray);
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .eventDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentBottom .logo {
+    width: 45%;
+  }
+
+  .date {
+    font-size: 1.3rem;
+    margin-left: 6rem;
+    margin-top: 0.3rem;
   }
 `;
 

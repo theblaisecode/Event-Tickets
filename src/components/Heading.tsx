@@ -1,6 +1,8 @@
+import React from "react";
+
 type HeadingText = {
-  text: string;
-  subtext: string;
+  text: React.ReactNode;
+  subtext: React.ReactNode;
 };
 
 function Heading(props: HeadingText): JSX.Element {

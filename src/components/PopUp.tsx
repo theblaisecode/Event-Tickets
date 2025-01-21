@@ -4,7 +4,6 @@ import Heading from "./Heading";
 import logo from "../assets/logo.png";
 import { HiXMark } from "react-icons/hi2";
 
-
 type PopupProp = {
   name: string;
   email: string;
@@ -12,8 +11,31 @@ type PopupProp = {
 };
 
 function PopUp(props: PopupProp) {
-  const text = `Congrats, ${props.name}! Your ticket is ready. `;
-  const subtext = `We've emailed your ticket to ${props.email} and will send updates in the run up to the event.`;
+  const title = (
+    <>
+      Congrats, <span className="highlight">Jonathan Kristof</span>! Your ticket
+      is ready.
+    </>
+  );
+  const subtitle = (
+    <>
+      We've emailed your ticket to <span>theblaisecode@gmail.com</span> and will
+      send updates in the run up to the event.
+    </>
+  );
+  // const text = (
+  //   <>
+  //     Congrats,
+  //     <span className="highlight">{props.name}</span>! Your ticket is ready.
+  //   </>
+  // );
+
+  // const subtext = (
+  //   <>
+  //     We've emailed your ticket to <span>{props.email}</span> and will send
+  //     updates in the run up to the event.
+  //   </>
+  // );
 
   return (
     <PopUpWrapper>
@@ -29,11 +51,28 @@ function PopUp(props: PopupProp) {
           </Link>
 
           <button className="closebutton" onClick={props.closePopup}>
-            <HiXMark/>
+            <HiXMark />
           </button>
         </div>
 
-        <Heading text={text} subtext={subtext} />
+        <div className="contentTop">
+          <Heading text={title} subtext={subtitle} />
+        </div>
+
+        <div className="contentBottom">
+          <div className="leftContent">
+            <div className="logo">
+              <img src={logo} alt="Coding Conf Logo" />
+              <span>Coding Conf</span>
+            </div>
+
+            <div className="date">{} / Lagos, NG</div>
+          </div>
+
+          <div className="rightContent">
+    
+          </div>
+        </div>
       </div>
     </PopUpWrapper>
   );

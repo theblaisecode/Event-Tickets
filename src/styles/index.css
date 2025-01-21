@@ -13,6 +13,7 @@
   --textGray: #c5c1d9a1;
   --formBg: #c5c1d92a;
   --error: #cf1f1ffd;
+  --btn: #04021e;
 }
 
 html {
@@ -37,4 +38,21 @@ body {
 .activeStyle {
   color: var(--primary);
   transition: "all .4s ease-in-out";
+}
+
+.btn {
+  background: var(--primary);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: var(--btn);
+  font-weight: 700;
+  width: 100%;
+}
+
+button,
+a {
+  cursor: pointer;
 }

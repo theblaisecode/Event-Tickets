@@ -12,10 +12,10 @@ function Nav() {
       </NavLink>
 
       <NavLink
-        to="/about"
-        aria-label="Link to About page"
+        to="/code-of-conduct"
+        aria-label="Link to Code of Conduct page"
         className={({ isActive }) => (isActive ? "activeStyle" : "")}>
-        About
+        Code of Conduct
       </NavLink>
     </NavWrapper>
   );

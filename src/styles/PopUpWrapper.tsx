@@ -33,11 +33,32 @@ const PopUpWrapper = styled.div`
     font-weight: 600;
   }
 
-  .logo {
-    width: 70%;
+  .head {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
   }
 
-  .logo img {
+  .closebutton {
+    position: absolute;
+    right: 0;
+    background: none;
+    color: var(--primary);
+    font-size: 3.5rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+  }
+
+  a.logo {
+    display: block;
+    width: 30%;
+  }
+
+  a.logo img {
     width: 100%;
   }
 
@@ -71,7 +92,7 @@ const PopUpWrapper = styled.div`
   }
 
   .contentBottom {
-    margin-top: 10rem;
+    margin-top: 8rem;
     width: 45%;
     position: relative;
   }
@@ -79,13 +100,12 @@ const PopUpWrapper = styled.div`
   .contentBottom .ticket {
     width: 100%;
     position: relative;
-    z-index: 1;
   }
 
   .ticketContent {
     position: absolute;
-    top: 20%;
-    left: 24%;
+    top: 48%;
+    left: 48%;
     transform: translate(-50%, -50%);
     z-index: 2;
     color: var(--textGray);
@@ -94,21 +114,49 @@ const PopUpWrapper = styled.div`
     padding: 1rem;
   }
 
-  .eventDetails {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .contentBottom .logo {
     width: 45%;
   }
 
+  .eventDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
   .date {
     font-size: 1.3rem;
-    margin-left: 6rem;
+    margin-left: 4rem;
     margin-top: 0.3rem;
+  }
+
+  .attendee {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .attendee img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1rem;
+  }
+
+  .attendeeInfo {
+    color: var(--textLight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.8rem;
   }
 
   .rightContent {
@@ -116,8 +164,13 @@ const PopUpWrapper = styled.div`
     transform: rotate(90deg);
     font-size: 2.2rem;
     top: 43%;
-    right:2%;
-    color: var(--textGray)
+    right: 2%;
+    color: var(--textGray);
+  }
+
+  .download {
+    width: 45%;
+    margin-top: 3rem;
   }
 `;
 

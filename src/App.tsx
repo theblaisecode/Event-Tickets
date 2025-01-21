@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, About, Thanks } from "./pages";
+import { Home, CodeOfConduct } from "./pages";
 import HomeLayout from "./Layout/HomeLayout";
 // import { ticketFormAction } from "./components/Form";
 
@@ -11,15 +11,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        // action: {ticketFormAction},
       },
       {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "thanks",
-        element: <Thanks />,
+        path: "code-of-conduct",
+        element: <CodeOfConduct />,
       },
     ],
   },

@@ -1,32 +1,46 @@
 import React, { useState } from "react";
 import FormWrapper from "../styles/FormWrapper";
-import { ActionFunction, redirect, Form as TicketForm } from "react-router-dom";
+import { Form as TicketForm } from "react-router-dom";
 import PopUp from "./PopUp";
 
 function Form() {
   const [isPopUp, setIsPopUp] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    image: "",
+    name: "",
+    email: "",
+    username: "",
+  });
 
   const generateTicket = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const data = new FormData(e.target as HTMLFormElement);
 
+    const imageFile = data.get("image") as File | null;
     const generate = {
-      image: data.get("image"),
-      name: data.get("name"),
-      email: data.get("email"),
-      username: data.get("username"),
+      image: imageFile ? URL.createObjectURL(imageFile) : "",
+      name: data.get("name") as string,
+      email: data.get("email") as string,
+      username: data.get("username") as string,
     };
 
-    console.log(generate);
+    setFormData({
+      image: generate.image,
+      name: generate.name,
+      email: generate.email,
+      username: generate.username,
+    });
 
-    setIsPopUp(true)
+    setIsPopUp(true);
   };
 
   const closePopUp = () => {
-    setIsPopUp(false)
-    window.location.href = "/"
-  }
+    setIsPopUp(false);
+    // Reset the form fields
+    const formElement = document.querySelector("form");
+    formElement?.reset();
+  };
 
   return (
     <FormWrapper>
@@ -51,27 +65,22 @@ function Form() {
           <input type="text" name="username" id="username" />
         </label>
 
-        <button type="submit">Generate My Ticket</button>
+        <button className="btn" type="submit">
+          Generate My Ticket
+        </button>
       </TicketForm>
 
-      {isPopUp && <PopUp closePopup={closePopUp} />}
+      {isPopUp && (
+        <PopUp
+          closePopup={closePopUp}
+          image={formData.image}
+          name={formData.name}
+          email={formData.email}
+          username={formData.username}
+        />
+      )}
     </FormWrapper>
   );
 }
-
-// export const ticketFormAction: ActionFunction = async ({ request }) => {
-//   console.log(request);
-
-//   const data = await request.formData();
-//   const generate = {
-//     name: data.get("name"),
-//     email: data.get("email"),
-//     username: data.get("username"),
-//   };
-
-//   console.log(generate);
-
-//   return redirect("/");
-// };
 
 export default Form;

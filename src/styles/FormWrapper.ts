@@ -5,7 +5,7 @@ const FormWrapper = styled.div`
   margin-top: 2rem;
 
   form {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   form,
@@ -17,7 +17,7 @@ const FormWrapper = styled.div`
 
   label {
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   input {
@@ -36,7 +36,7 @@ const FormWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 2px dashed var(--textGray);
+    border: 0.2rem dashed var(--textGray);
     border-radius: 1rem;
     padding: 1rem;
   }
@@ -47,14 +47,14 @@ const FormWrapper = styled.div`
     position: static; // Remove the absolute positioning
     height: auto;
     width: auto;
-    cursor: pointer;// Allow pointer events on the file input
+    cursor: pointer; // Allow pointer events on the file input
   }
-  
+
   .preview-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 
   .preview-image {
@@ -67,7 +67,7 @@ const FormWrapper = styled.div`
   }
 
   .image-name {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     color: #ccc;
     font-size: 1.4rem;
   }
@@ -80,22 +80,31 @@ const FormWrapper = styled.div`
   }
 
   .button-group button {
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
     border: none;
-    border-radius: 5px;
-    background: var(--primary);
-    color: #fff;
+    border-radius: 0.5rem;
+    background: var(--textGray);
+    color: var(--textLight);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
   }
 
   .button-group button:hover {
-    background: var(--primaryHover);
+    background: var(--primary);
+    transition: all 0.3s;
   }
 
   input[type="file"]::-webkit-textfield-decoration-container,
   input[type="file"]::-webkit-file-upload-button {
     display: none;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 1.15rem;
+    display: flex;
+    align-items:center;
+    gap: .5rem;
   }
 `;
 

@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import PopUpWrapper from "../styles/PopUpWrapper";
 import Heading from "./Heading";
 import fulllogo from "../assets/fullLogo.png";
 import ticketImg from "../assets/ticket.png";
 import { HiXMark } from "react-icons/hi2";
 import html2canvas from "html2canvas";
+import github from '../assets/github.png'
 
 type PopupProp = {
   image: string;
@@ -35,18 +35,18 @@ function PopUp(props: PopupProp) {
     </>
   );
 
-  // Function to download content as image
+  // Download Ticket
   const downloadTicket = () => {
     const content: Element | null = document.querySelector(".contentBottom");
     if (content) {
       html2canvas(content, {
-        backgroundColor: "#04021e", // Set the background color of the canvas
+        backgroundColor: "#04021e", 
       }).then((canvas) => {
-        // Create a link to download the image
+        
         const link = document.createElement("a");
-        link.href = canvas.toDataURL(); // Convert canvas to image URL
-        link.download = "ticket.png"; // Specify the name of the file
-        link.click(); // Trigger download
+        link.href = canvas.toDataURL(); 
+        link.download = "ticket.png"; 
+        link.click(); 
       });
     }
   };
@@ -93,7 +93,7 @@ function PopUp(props: PopupProp) {
 
                 <div className="attendeeInfo">
                   <h3>{props.name}</h3>
-                  <span>@{props.username}</span>
+                  <span> <img src={github} className="github" alt="" /> @{props.username}</span>
                 </div>
               </div>
             </div>

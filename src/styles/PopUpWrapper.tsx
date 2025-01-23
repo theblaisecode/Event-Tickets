@@ -133,7 +133,7 @@ const PopUpWrapper = styled.div`
 
   .date {
     font-size: 1.3rem;
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-top: 0.3rem;
   }
 
@@ -159,6 +159,17 @@ const PopUpWrapper = styled.div`
     gap: 0.8rem;
   }
 
+  .attendeeInfo span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .attendeeInfo img.github {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   .rightContent {
     position: absolute;
     transform: rotate(90deg);
@@ -170,7 +181,7 @@ const PopUpWrapper = styled.div`
 
   .download {
     width: 45%;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 `;
 

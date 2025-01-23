@@ -5,7 +5,13 @@ function Footer() {
 
   return (
     <FooterWrapper>
-      &copy; {time.getFullYear()} | Made with ❤ by TheBlaiseCode
+      &copy; {time.getFullYear()} | Made with ❤ by {" "}
+      <a
+        href="https://twitter.com/theblaisecode"
+        target="_blank"
+        aria-label="Link to the developers twitter page">
+        TheBlaiseCode
+      </a>
     </FooterWrapper>
   );
 }

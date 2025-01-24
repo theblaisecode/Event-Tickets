@@ -5,7 +5,7 @@ const HomeWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   .title {
     font-size: 4rem;
@@ -19,6 +19,8 @@ const HomeWrapper = styled.div`
     font-size: 1.8rem;
     padding-top: .8rem;
   }
+
+  .none {display: none;}
 `;
 
 export default HomeWrapper;

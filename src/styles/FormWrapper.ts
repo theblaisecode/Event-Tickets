@@ -99,13 +99,17 @@ const FormWrapper = styled.div`
     display: none;
   }
 
-  .error-message {
+  .error-message,
+  .message {
     color: red;
     font-size: 1.15rem;
     display: flex;
     align-items:center;
     gap: .5rem;
   }
+
+  .message {
+    color: var(--textGray);}
 `;
 
 export default FormWrapper;

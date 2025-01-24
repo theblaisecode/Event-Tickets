@@ -46,7 +46,7 @@ function Form() {
     e.preventDefault();
 
     const data = new FormData(e.target as HTMLFormElement);
-    const imageFile = data.get("image") as File | null;
+    // const imageFile = data.get("image") as File | null;
 
     const generate = {
       image: selectedImage, // Use the current selectedImage state
@@ -78,15 +78,19 @@ function Form() {
         return; // Exit early to prevent invalid image from being processed
       }
 
-      setSelectedImage(URL.createObjectURL(file));
+      setSelectedImage(URL.createObjectURL(file)); // Update with the new image preview
       setErrors((prev) => ({ ...prev, image: "" })); // Clear image error if valid
     } else {
-      setSelectedImage(upload);
-      setErrors((prev) => ({
-        ...prev,
-        image: "Please choose an image.",
-      }));
+      // If no file is selected, keep the current image
+      e.target.value = ""; // Reset the input value to avoid stale file references
     }
+  };
+
+  const handleChangeImageClick = () => {
+    const inputElement = document.querySelector<HTMLInputElement>(
+      'input[name="image"]'
+    ) as HTMLInputElement;
+    inputElement?.click(); // Programmatically trigger the file input dialog
   };
 
   const closePopUp = () => {
@@ -132,15 +136,12 @@ function Form() {
                     }}>
                     Remove
                   </button>
+
                   <button
                     type="button"
                     onClick={(e) => {
-                      e.preventDefault()
-                      const inputElement =
-                        document.querySelector<HTMLInputElement>(
-                          'input[name="image"]'
-                        ) as HTMLInputElement;
-                      inputElement?.click();
+                      e.preventDefault();
+                      handleChangeImageClick(); // Trigger file selection
                     }}>
                     Change
                   </button>
@@ -169,11 +170,13 @@ function Form() {
         <label>
           <span>Full Name</span>
           <input type="text" name="name" id="name" />
-          {errors.name ?
+          {errors.name ? (
             <p className="error-message">
               <MdInfoOutline /> {errors.name}
             </p>
-          : <p className="none"> jj</p> }
+          ) : (
+            <p className="none"> jj</p>
+          )}
         </label>
 
         <label>

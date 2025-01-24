@@ -164,7 +164,9 @@ const PopUpWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.3rem;
   }
+
   .attendeeInfo img.github {
     width: 1.5rem;
     height: 1.5rem;

@@ -37,7 +37,7 @@ function PopUp(props: PopupProp) {
 
   // Download Ticket
   const downloadTicket = () => {
-    const content: Element | null = document.querySelector(".contentBottom");
+    const content: HTMLElement | null = document.querySelector(".contentBottom");
     if (content) {
       html2canvas(content, {
         backgroundColor: "#04021e",

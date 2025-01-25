@@ -2,6 +2,7 @@ import styled from "styled-components";
 import bg from "../assets/background.png";
 
 const PopUpWrapper = styled.div`
+  background-color: #06011c;
   position: fixed;
   top: 0;
   left: 0;

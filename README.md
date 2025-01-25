@@ -1,7 +1,7 @@
 # Events Ticket  
 A dynamic web application that allows users to enter their information via a form and generate a downloadable ticket. Built using React Router, Vite, TypeScript, React Icons, html2canvas, and Styled Components to provide an engaging and smooth user experience.
 
-**Live Website** - [Insert live URL here]
+**Live Website** - https://theblaisecode.github.io/Event-Tickets/
 
 <br/>
 

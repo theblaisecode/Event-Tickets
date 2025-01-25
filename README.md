@@ -1,5 +1,5 @@
 # Events Ticket  
-A dynamic web application that allows users to enter their information via a form and generate a ticket. Built using React Router, Vite, TypeScript, React Icons, html2canvas, and Styled Components to provide an engaging and smooth user experience.
+A dynamic web application that allows users to enter their information via a form and generate a downloadable ticket. Built using React Router, Vite, TypeScript, React Icons, html2canvas, and Styled Components to provide an engaging and smooth user experience.
 
 **Live Website** - [Insert live URL here]
 

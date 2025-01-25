@@ -4,7 +4,7 @@ import fulllogo from "../assets/fullLogo.png";
 import ticketImg from "../assets/ticket.png";
 import { HiXMark } from "react-icons/hi2";
 import html2canvas from "html2canvas";
-import github from '../assets/github.png'
+import github from "../assets/github.png";
 
 type PopupProp = {
   image: string;
@@ -30,8 +30,8 @@ function PopUp(props: PopupProp) {
 
   const subtitle = (
     <>
-      We've emailed your ticket to <span>{props.email}</span> and will send
-      updates in the run up to the event.
+      Your ticket is ready! <span>Click the button below to download it.</span>{" "}
+      We'll keep you updated in the run-up to the event via email.
     </>
   );
 
@@ -40,13 +40,12 @@ function PopUp(props: PopupProp) {
     const content: Element | null = document.querySelector(".contentBottom");
     if (content) {
       html2canvas(content, {
-        backgroundColor: "#04021e", 
+        backgroundColor: "#04021e",
       }).then((canvas) => {
-        
         const link = document.createElement("a");
-        link.href = canvas.toDataURL(); 
-        link.download = "ticket.png"; 
-        link.click(); 
+        link.href = canvas.toDataURL();
+        link.download = "Coding-Conf-Ticket.png";
+        link.click();
       });
     }
   };
@@ -93,7 +92,11 @@ function PopUp(props: PopupProp) {
 
                 <div className="attendeeInfo">
                   <h3>{props.name}</h3>
-                  <span> <img src={github} className="github" alt="" /> @{props.username}</span>
+                  <span>
+                    {" "}
+                    <img src={github} className="github" alt="" /> @
+                    {props.username}
+                  </span>
                 </div>
               </div>
             </div>

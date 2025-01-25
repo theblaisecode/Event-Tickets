@@ -35,13 +35,52 @@ const CodeOfConductWrapper = styled.div`
     margin-top: 5rem;
     width: 53%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 3.5rem;
   }
 
   li {
     font-size: 1.8rem;
     line-height: 2.5rem;
+  }
+
+  @media screen and (max-width: 950px), screen and (max-height: 550px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .title {
+      font-size: 3rem;
+      width: 100%;
+    }
+
+    .subTitle {
+      font-size: 1.7rem;
+      padding-top: 0.8rem;
+      width: 100%;
+    }
+
+    ol {
+      margin-top: 3rem;
+      width: 100%;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    li {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 950px) {
+    .title,
+    .subTitle,
+    ol {
+      width: 80%;
+    }
   }
 `;
 

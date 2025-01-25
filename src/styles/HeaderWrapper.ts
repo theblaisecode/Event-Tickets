@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderWrapper = styled.nav`
+const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +19,15 @@ const HeaderWrapper = styled.nav`
     justify-content: center;
     align-items: center;
     gap: 1rem;
+  }
+
+  @media screen and (max-width: 950px), screen and (max-height: 550px) {
+    gap: 3rem;
+    flex-direction: column !important;
+
+    .logo img {
+      width: 3rem;
+    }
   }
 `;
 

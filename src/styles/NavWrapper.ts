@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavWrapper = styled.div`
+const NavWrapper = styled.nav`
   display: flex;
   gap: 3rem;
 

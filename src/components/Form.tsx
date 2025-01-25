@@ -181,7 +181,7 @@ function Form() {
 
         <label>
           <span>Email Address</span>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" placeholder="example@email.com" />
           {errors.email && (
             <p className="error-message">
               <MdInfoOutline /> {errors.email}
@@ -191,7 +191,7 @@ function Form() {
 
         <label>
           <span>Github Username</span>
-          <input type="text" name="username" id="username" />
+          <input type="text" name="username" id="username" placeholder="yourusername" />
           {errors.username && (
             <p className="error-message">
               <MdInfoOutline /> {errors.username}

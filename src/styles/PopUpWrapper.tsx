@@ -185,6 +185,103 @@ const PopUpWrapper = styled.div`
     width: 45%;
     margin-top: 4rem;
   }
+
+  @media screen and (max-width: 950px), screen and (max-height: 550px) {
+    .head {
+      width: 100%;
+    }
+
+    .contentTop .title {
+      width: 100%;
+    }
+
+    .contentTop .subTitle {
+      width: 100%;
+    }
+
+    .contentBottom {
+      margin-top: 4rem;
+      width: 100%;
+    }
+
+    .contentBottom .logo img {
+      width: 120%;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      margin-left: 3.5rem;
+      margin-top: 0.2rem;
+    }
+
+    .attendee img {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .attendeeInfo span {
+      font-size: 1.2rem;
+    }
+
+    .rightContent {
+      font-size: 2rem;
+      top: 41.5%;
+      right: 1%;
+    }
+
+    .download {
+      width: 100%;
+    }
+
+    .closebutton {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 950px) {
+    .contentTop .title,
+    .contentTop .subTitle,
+    .contentBottom,
+    .download {
+      width: 80%;
+    }
+
+    .date {
+      margin-left: 4.2rem;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 950px) {
+    .contentBottom,
+    .download {
+      width: 60%;
+    }
+
+    .date {
+      margin-left: 3.5rem;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 950px) {
+    .date {
+      margin-left: 4.5rem;
+    }
+
+    .rightContent {
+      right: 2%;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 950px) {
+    .contentBottom,
+    .download {
+      width: 50%;
+    }
+
+    .date {
+      margin-left: 4.5rem;
+    }
+  }
 `;
 
 export default PopUpWrapper;

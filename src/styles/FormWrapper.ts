@@ -28,6 +28,7 @@ const FormWrapper = styled.div`
     outline: none;
     background: var(--formBg);
     color: var(--textLight);
+    transition: 0.4s;
   }
 
   .file-input-wrapper {
@@ -39,6 +40,12 @@ const FormWrapper = styled.div`
     border: 0.2rem dashed var(--textGray);
     border-radius: 1rem;
     padding: 1rem;
+    transition: 0.4s;
+  }
+
+  .file-input-wrapper:hover {
+    border: 0.2rem dashed var(--primary);
+    transition: all 0.4s;
   }
 
   input[type="file"] {
@@ -99,17 +106,47 @@ const FormWrapper = styled.div`
     display: none;
   }
 
+  input::placeholder {
+    letter-spacing: 0.1rem;
+    color: var(--textGray);
+  }
+
   .error-message,
   .message {
     color: red;
     font-size: 1.15rem;
     display: flex;
-    align-items:center;
-    gap: .5rem;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .message {
-    color: var(--textGray);}
+    color: var(--textGray);
+  }
+
+  input:focus,
+  input:hover {
+    border: 0.2rem solid var(--primary);
+    transition: all 0.4s;
+  }
+
+  @media screen and (max-width: 950px), screen and (max-height: 550px) {
+    width: 100%;
+
+    form {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 950px) {
+    width: 80%;
+  }
+  
+  
+  @media (min-width: 951px) and (max-width: 1200px) {
+
+    width: 50%;
+  }
 `;
 
 export default FormWrapper;

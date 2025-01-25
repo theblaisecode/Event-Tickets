@@ -59,7 +59,7 @@ a {
 
 @media screen and (max-width: 950px), screen and (max-height: 550px) {
   body {
-    background: url("../assets/backgroundMobile.png") center top;
+    background: url("../assets/backgroundTablet.png") right top;
     object-fit: cover;
   }
 
@@ -68,16 +68,16 @@ a {
   }
 }
 
-@media (min-width: 550px) and (max-width: 950px) {
+@media (min-width: 951px) and (max-width: 1200px) {
   body {
-    background: url("../assets/backgroundTablet.png") right top;
+    background: url("../assets/background.png") no-repeat right top;
     object-fit: cover;
   }
 }
 
-@media (min-width: 951px) and (max-width: 1200px) {
+@media (min-width: 1201px) and (max-width: 1440px) {
   body {
-    background: url("../assets/backgroundTablet.png") right top;
+    background: url("../assets/background.png") no-repeat right top;
     object-fit: cover;
   }
 }

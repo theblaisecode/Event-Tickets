@@ -45,14 +45,14 @@ const HomeWrapper = styled.div`
       font-size: 3rem;
       width: 80%;
     }
-    
+
     .subTitle {
       width: 80%;
       font-size: 1.7rem;
       padding-top: 1.5rem;
     }
   }
-  
+
   @media (min-width: 951px) and (max-width: 1200px) {
     .title {
       font-size: 3.5rem;
@@ -61,6 +61,13 @@ const HomeWrapper = styled.div`
 
     .subTitle {
       width: 80%;
+    }
+  }
+
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    .title,
+    .subTitle {
+      width: 48%;
     }
   }
 `;

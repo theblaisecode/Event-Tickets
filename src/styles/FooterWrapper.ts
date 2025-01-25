@@ -24,6 +24,20 @@ const FooterWrapper = styled.footer`
     text-align: center;
     padding-bottom: 2rem;
   }
+
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    position: static;
+    margin-top: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 1441px) and (max-width: 1628px) {
+    position: static;
+    margin-top: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
 `;
 
 export default FooterWrapper;

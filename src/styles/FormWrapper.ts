@@ -141,11 +141,17 @@ const FormWrapper = styled.div`
   @media (min-width: 550px) and (max-width: 950px) {
     width: 80%;
   }
-  
-  
-  @media (min-width: 951px) and (max-width: 1200px) {
 
+  @media (min-width: 951px) and (max-width: 1200px) {
     width: 50%;
+  }
+
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1441px) and (max-width: 1628px) {
+    width: 35%;
   }
 `;
 

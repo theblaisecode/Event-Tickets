@@ -82,6 +82,33 @@ const CodeOfConductWrapper = styled.div`
       width: 80%;
     }
   }
+
+  @media (min-width: 951px) and (max-width: 1200px) {
+    .title,
+    .subTitle,
+    ol {
+      margin-top: 3rem;
+      width: 85%;
+    }
+  }
+
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    .title,
+    .subTitle,
+    ol {
+      margin-top: 3rem;
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 1441px) and (max-width: 1628px) {
+    .title,
+    .subTitle,
+    ol {
+      margin-top: 3rem;
+      width: 73%;
+    }
+  }
 `;
 
 export default CodeOfConductWrapper;

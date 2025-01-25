@@ -213,6 +213,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
     width: 35%;
   }
 `,qU="/Event-Tickets/assets/background-ByL_A3L2.png",AF=Xr.div`
+  background-color: #06011c;
   position: fixed;
   top: 0;
   left: 0;

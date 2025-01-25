@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home, CodeOfConduct } from "./pages";
 import HomeLayout from "./Layout/HomeLayout";
-// import { ticketFormAction } from "./components/Form";
 
 const router = createBrowserRouter(
   [
